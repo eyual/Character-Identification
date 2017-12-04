@@ -1,0 +1,16 @@
+Average F1 (conll): 2.70%
+muc
+f1 0.809084776254
+recall 0.803842716711
+precision 0.814395654142
+b_cubed
+f1 0.643876093624
+recall 0.625434641503
+precision 0.66343810908
+ceafe
+f1 0.528982612355
+recall 0.505456431482
+precision 0.554805728047
+Average F1 (py): 66.06%
+Average precision (py): 67.75%
+Average recall (py): 64.49%
