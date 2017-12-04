@@ -482,7 +482,14 @@ class CorefModel(object):
     average_f1 = sum(results["f"] for results in conll_results.values()) / len(conll_results)
     summary_dict["Average F1 (conll)"] = average_f1
     print "Average F1 (conll): {:.2f}%".format(average_f1)
-
+    
+    result = [[e.get_f1(), e.get_recall(), e.get_precision()] for e in coref_evaluator.evaluators]
+    a = ["muc", "b_cubed", "ceafe"]
+    b = ["f1","recall","precision"]
+    for i in range(3):
+      print a[i]
+      for j in range(3):
+        print b[j], result[i][j]
     p,r,f = coref_evaluator.get_prf()
     summary_dict["Average F1 (py)"] = f
     print "Average F1 (py): {:.2f}%".format(f * 100)
